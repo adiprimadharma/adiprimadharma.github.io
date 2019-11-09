@@ -22,7 +22,8 @@ c2()
     sleep 0.1
 }
 echo -e "\n\n\n\n\n\n\n\n\n\033[8F\033[s"
-while [ 1 = 1 ]
+i=0
+while [ i < 20 ]
 do  echo -e "\033[u   ROFL:ROFL:ROFL:ROFL " ; c1
     echo -e "\033[u     LOL:LOL:LOL:LOL   " ; c2
     echo -e "\033[u        ROFL:ROFL      " ; c1
@@ -35,5 +36,6 @@ do  echo -e "\033[u   ROFL:ROFL:ROFL:ROFL " ; c1
     echo -e "\033[u           LOL         " ; c2
     echo -e "\033[u        ROFL:ROFL      " ; c1
     echo -e "\033[u     LOL:LOL:LOL:LOL   " ; c2
+    ((i += 1))
 done
 echo ================== Executing Git Push ==================
