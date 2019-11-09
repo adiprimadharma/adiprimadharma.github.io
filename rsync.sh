@@ -23,7 +23,7 @@ c2()
 }
 echo -e "\n\n\n\n\n\n\n\n\n\033[8F\033[s"
 i=0
-while [ i < 20 ]
+while ((i < 20));
 do  echo -e "\033[u   ROFL:ROFL:ROFL:ROFL " ; c1
     echo -e "\033[u     LOL:LOL:LOL:LOL   " ; c2
     echo -e "\033[u        ROFL:ROFL      " ; c1
