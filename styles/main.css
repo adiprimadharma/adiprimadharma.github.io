@@ -480,9 +480,11 @@ mark,
   content: "\2014 \00A0";
 }
 
-.img-fluid {
+.img-fluid:not(.save-date) {
   max-width: 100%;
   height: auto;
+  border-radius: 24px;
+  box-shadow: 3px 3px 4px 0px #989292;
 }
 
 .img-thumbnail {
@@ -3902,6 +3904,7 @@ tbody.collapse.show {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  text-transform: capitalize;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -4408,11 +4411,11 @@ tbody.collapse.show {
 
 .navbar-light .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgb(211, 165, 125);
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(211, 165, 125)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-light .navbar-text {
@@ -5512,6 +5515,7 @@ button.close {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 0;
+  border-radius: 24px;
 }
 
 .modal-backdrop {
@@ -5529,7 +5533,7 @@ button.close {
 }
 
 .modal-backdrop.show {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .modal-header {
@@ -7390,6 +7394,7 @@ button.bg-dark:focus {
     position: sticky;
     top: 0;
     z-index: 1020;
+    box-shadow: 0px 3px 10px #e0e0e0;
   }
 }
 
@@ -9051,10 +9056,15 @@ body {
   letter-spacing: 2px;
 }
 
+@media (min-width: 769px) {
+  .ww-home-page .ww-wedding-announcement .ww-announcement-container {
+    margin-left: 0;
+  }
+}
+
 .ww-home-page .ww-wedding-announcement .ww-announcement-container {
   max-width: 600px;
   text-align: center;
-  margin-left: 0;
   z-index: 999;
 }
 
@@ -9273,7 +9283,7 @@ body {
 }
 
 /* Common Style */
-.ww-title {
+.ww-title, .navbar-brand {
   font-family: "Great Vibes", cursive;
 }
 
@@ -9294,4 +9304,21 @@ body {
     background: url('../images//photo-gallery-mafia/pg-13.jpeg') no-repeat center center;
     background-size: cover;
   }
+}
+
+h1, h2, .h1, .h2:not(.ww-title), .navbar-light .navbar-brand {
+  color: #d3a57d;
+}
+
+.navbar-light .navbar-brand {
+  font-size: 2rem;
+  padding: 0;
+}
+
+.navbar-light .h2 {
+  margin: 0;
+}
+
+#couple .ww-title {
+  color: #d3a57d;
 }

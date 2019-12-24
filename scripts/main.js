@@ -107,3 +107,9 @@ var photoGalleryCardMafia = '<!-- Best Partner -->';
   }
   photoGalleryCardMafia += '<!-- End Best Partner -->';
 $("#pg-card-list").append(photoGalleryCardMafia);
+
+
+// countdown
+var timeLeft = countdown(function(ts) {
+  document.getElementById('countdown').innerHTML = ts.toHTML("strong");
+}, new Date(1580644800000), countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS);
