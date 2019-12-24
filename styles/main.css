@@ -9032,11 +9032,13 @@ body {
 
 /* Home Page Style */
 .ww-home-page {
-  background: url("../images/home-img.jpg") no-repeat center center;
+  background: url("../images/home-img-2.jpeg") no-repeat center center;
   background-size: cover;
-  background-position: 70%;
+  background-position: center;
   height: 100vh;
   min-height: 480px;
+  -webkit-filter: hue-rotate(45deg);
+  filter: hue-rotate(45deg);
 }
 
 .ww-home-page .ww-wedding-announcement {
@@ -9199,6 +9201,8 @@ body {
   background-size: cover;
   min-height: 500px;
   position: relative;
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .ww-rsvp-detail .ww-rsvp-form {
@@ -9283,4 +9287,11 @@ body {
 
 .btn-outline-primary:hover {
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .ww-home-page {
+    background: url('../images//photo-gallery-mafia/pg-13.jpeg') no-repeat center center;
+    background-size: cover;
+  }
 }

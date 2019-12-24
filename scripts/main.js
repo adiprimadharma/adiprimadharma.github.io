@@ -94,3 +94,16 @@ $(document).on("click", '[data-toggle="lightbox"]', function(event) {
   event.preventDefault();
   $(this).ekkoLightbox();
 });
+
+// compose gallery
+var mafiaLength = 16;
+var photoGalleryCardMafia = '<!-- Best Partner -->';
+  for (let index = 1; index <= mafiaLength; index++) {
+    photoGalleryCardMafia += '<div class="card" data-groups="[&quot;bp&quot;,&quot;wedd&quot;]">'+
+      '<a href="images/photo-gallery-mafia/pg-'+index+'.jpeg" data-toggle="lightbox" data-gallery="ww-gallery">'+
+        '<img class="img-fluid" src="images/photo-gallery-mafia/pg-'+index+'.jpeg" alt="Best Partner '+index+'"/>'+
+      '</a>'+
+    '</div>';
+  }
+  photoGalleryCardMafia += '<!-- End Best Partner -->';
+$("#pg-card-list").append(photoGalleryCardMafia);
