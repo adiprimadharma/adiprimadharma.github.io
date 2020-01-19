@@ -9207,7 +9207,7 @@ body {
 
 /* RSVP Style */
 .ww-rsvp-detail {
-  background: url("../images/rsvp-img.jpg") no-repeat center center;
+  background: url("../images/ring.jpg") no-repeat center center;
   background-size: cover;
   min-height: 500px;
   position: relative;
@@ -9272,6 +9272,10 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.ww-rsvp-detail .ww-title {
+  color: #ffffff;
 }
 
 /* Footer Style */

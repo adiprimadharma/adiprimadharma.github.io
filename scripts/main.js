@@ -96,20 +96,44 @@ $(document).on("click", '[data-toggle="lightbox"]', function(event) {
 });
 
 // compose gallery
-var mafiaLength = 16;
-var photoGalleryCardMafia = '<!-- Best Partner -->';
-  for (let index = 1; index <= mafiaLength; index++) {
-    photoGalleryCardMafia += '<div class="card" data-groups="[&quot;bp&quot;,&quot;wedd&quot;]">'+
-      '<a href="images/photo-gallery-mafia/pg-'+index+'.jpeg" data-toggle="lightbox" data-gallery="ww-gallery">'+
-        '<img class="img-fluid" src="images/photo-gallery-mafia/pg-'+index+'.jpeg" alt="Best Partner '+index+'"/>'+
+var bpLength = 20;
+var photoGalleryCardBP = '<!-- Best Partner -->';
+  for (let index = 1; index <= bpLength; index++) {
+    photoGalleryCardBP += '<div class="card" data-groups="[&quot;bp&quot;,&quot;all&quot;]">'+
+      '<a href="images/photo-gallery-mafia/bp-'+index+'.jpg" data-toggle="lightbox" data-gallery="ww-gallery">'+
+        '<img class="img-fluid" src="images/photo-gallery-mafia/bp-'+index+'.jpg" alt="Best Partner '+index+'"/>'+
       '</a>'+
     '</div>';
   }
-  photoGalleryCardMafia += '<!-- End Best Partner -->';
-$("#pg-card-list").append(photoGalleryCardMafia);
+  photoGalleryCardBP += '<!-- End Best Partner -->';
+$("#pg-card-list").append(photoGalleryCardBP);
+
+var htLength = 10;
+var photoGalleryCardHT = '<!-- Best Partner -->';
+  for (let index = 1; index <= htLength; index++) {
+    photoGalleryCardHT += '<div class="card" data-groups="[&quot;ht&quot;,&quot;all&quot;]">'+
+      '<a href="images/photo-gallery-mafia/ht-'+index+'.jpg" data-toggle="lightbox" data-gallery="ww-gallery">'+
+        '<img class="img-fluid" src="images/photo-gallery-mafia/ht-'+index+'.jpg" alt="Best Partner '+index+'"/>'+
+      '</a>'+
+    '</div>';
+  }
+  photoGalleryCardHT += '<!-- End Best Partner -->';
+$("#pg-card-list").append(photoGalleryCardHT);
+
+var faLength = 9;
+var photoGalleryCardFA = '<!-- Best Partner -->';
+  for (let index = 1; index <= faLength; index++) {
+    photoGalleryCardFA += '<div class="card" data-groups="[&quot;fa&quot;,&quot;all&quot;]">'+
+      '<a href="images/photo-gallery-mafia/fa-'+index+'.jpg" data-toggle="lightbox" data-gallery="ww-gallery">'+
+        '<img class="img-fluid" src="images/photo-gallery-mafia/fa-'+index+'.jpg" alt="Best Partner '+index+'"/>'+
+      '</a>'+
+    '</div>';
+  }
+  photoGalleryCardFA += '<!-- End Best Partner -->';
+$("#pg-card-list").append(photoGalleryCardFA);
 
 
 // countdown
 var timeLeft = countdown(function(ts) {
   document.getElementById('countdown').innerHTML = ts.toHTML("strong");
-}, new Date(1580644800000), countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS);
+}, new Date(1581249600000), countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS);
